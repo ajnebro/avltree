@@ -31,20 +31,20 @@ import java.util.Comparator;
 public class AvlTree<T> {
 
   AvlNode<T> top;
-  Comparator comparator;
+  Comparator<T> comparator;
 
   /**
    * Constructor
    *
    * @param comparator
    */
-  public AvlTree(Comparator comparator) {
+  public AvlTree(Comparator<T> comparator) {
     top = null;
     this.comparator = comparator;
   }
 
   public void insert(T item) {
-    AvlNode<T> node = new AvlNode<T>(item);
+    AvlNode<T> node = new AvlNode<>(item);
     insertAvlNode(node);
   }
 
@@ -68,7 +68,7 @@ public class AvlTree<T> {
   }
 
   public AvlNode<T> search(T item) {
-    AvlNode<T> node = new AvlNode<T>(item);
+    AvlNode<T> node = new AvlNode<>(item);
     return searchNode(node);
   }
 
@@ -109,7 +109,7 @@ public class AvlTree<T> {
   }
 
   public void delete(T item) {
-    deleteNode(new AvlNode<T>(item));
+    deleteNode(new AvlNode<>(item));
   }
 
   public void deleteNode(AvlNode<T> node) {

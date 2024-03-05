@@ -19,7 +19,7 @@ public class AvlTreeTest {
   Comparator<?> comparator;
 
   @Before
-  public void setUp() throws Exception {
+  public void setUp() {
     comparator = Comparator.comparingInt((Integer o) -> o);
     avlTree = new AvlTree(comparator);
   }
