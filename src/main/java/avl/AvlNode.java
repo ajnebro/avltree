@@ -22,6 +22,8 @@
 package avl;
 
 /**
+ * Class representing a tree node
+ *
  * Created with IntelliJ IDEA. User: Antonio J. Nebro Date: 08/07/13 Time: 15:46
  */
 public class AvlNode<T> {
